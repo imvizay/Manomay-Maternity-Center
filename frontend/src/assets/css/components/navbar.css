@@ -1,0 +1,140 @@
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 76px;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1000;
+
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* SCROLL STATE */
+.nav.solid {
+  background: rgba(251, 249, 246, 0.96);
+  backdrop-filter: blur(20px);
+  height: 64px;
+  border-bottom: 1px solid rgba(184, 146, 74, 0.15);
+}
+
+/* LEFT */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TEXT */
+.nav-name .main {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+  color: white;
+  transition: 0.5s;
+}
+
+.nav.solid .nav-name .main {
+  color: var(--dark);
+}
+
+.nav-name .sub {
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: rgba(255,255,255,0.5);
+}
+
+.nav.solid .nav-name .sub {
+  color: var(--muted);
+}
+
+/* LINKS */
+
+.nav {
+  isolation: isolate;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  position: relative;
+  z-index: 1;
+}
+
+.nav-links a {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  transition: 0.3s;
+}
+
+.nav.solid .nav-links a {
+  color: var(--mid);
+}
+
+/* UNDERLINE ANIMATION */
+.nav-links a::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--gold);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.nav-links a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* BUTTON */
+.btn-book {
+  padding: 10px 20px;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 2px;
+}
+
+.nav.solid .btn-book {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.btn-book:hover {
+  background: var(--gold);
+  color: white;
+}
+
+
+/* MOBILE FRIENDLY CSS */
+
+@media (max-width:360px){
+
+  .nav{
+    justify-content: left;
+  }
+  .nav-links{
+    display: none;
+  }
+}

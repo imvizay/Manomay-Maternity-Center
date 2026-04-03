@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none !important;
+}
+.pixel-font {
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  cursor: none;
+}
+
+
+:root {
+  --ivory: #FBF9F6;
+  --gold: #B8924A;
+  --gold-light: #D4AF72;
+  --dark: #1A1A14;
+  --mid: #5C5C4A;
+  --muted: #8C8C7A;
+}
+
+body{
+  background-color: #3A5C4A;
+}

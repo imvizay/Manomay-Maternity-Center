@@ -1,0 +1,327 @@
+
+.sec {
+  padding: 100px 0;
+  background: #f6f3ef;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* ===== GRID ===== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 7rem;
+    align-items: center;
+}
+
+/* ===== LEFT VISUAL ===== */
+.about-img-comp {
+  position: relative;
+  width: 100%;
+  height: 520px;
+}
+
+/* frame */
+.aic-frame {
+  position: absolute;
+  top: 30px;
+  right: -12px;
+  width: 78%;
+  height: 90%;
+  border: 1px solid rgba(184, 146, 74, 0.25);
+  z-index: 0;
+}
+
+/* main block */
+.aic-main {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 78%;
+  height: 100%;
+  background: linear-gradient(135deg, #4f6f5f, #7f9f8c);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aic-fill {
+  font-size: 60px;
+}
+
+/* accent card */
+.aic-accent {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 55%;
+  height: 240px;
+  background: #d9a89c;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+  border: 4px solid #f6f3ef;
+  z-index: 2;
+}
+
+.aic-accent-fill {
+  font-size: 50px;
+}
+
+/* year badge */
+.aic-year {
+  position: absolute;
+  top: 40px;
+  left: -10px;
+  background: #c9a25d;
+  padding: 14px 20px;
+  z-index: 3;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.aic-year-num {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.aic-year-text {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* bottom tag */
+.aic-tag {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  background: #fff;
+  padding: 14px 18px;
+  border-radius: 10px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+  z-index: 3;
+}
+
+.aic-tag-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.aic-tag-dot {
+  width: 8px;
+  height: 8px;
+  background: #3ba55d;
+  border-radius: 50%;
+}
+
+.aic-tag-text {
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.aic-tag-sub {
+  font-size: 10px;
+  color: #777;
+  margin-top: 4px;
+  letter-spacing: 1.1px;
+}
+
+
+
+/* ===== RIGHT CONTENT ===== */
+
+/* eyebrow */
+.sec-eyebrow{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.sec-eyebrow-ornament{
+  display: flex;
+  gap: 10px;align-items: center;
+}
+
+.sec-eyebrow-line {
+  width: 40px;
+  height: 1px;
+  background: #c9a25d;
+}
+
+.sec-eyebrow-diamond {
+  width: 6px;
+  height: 6px;
+  background: #c9a25d;
+  transform: rotate(45deg);
+}
+
+.sec-eyebrow-text {
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: #a3834b;
+}
+
+/* title */
+.sec-title {
+  font-size: 48px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.sec-title em {
+  font-style: italic;
+  color: #5d7a6d;
+}
+
+/* paragraph */
+.about-body {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* quote */
+.about-pullquote {
+  background: #ece6de;
+  padding: 24px 28px;
+  border-left: 4px solid #c9a25d;
+  margin: 30px 0;
+  font-style: italic;
+  color: #333;
+}
+
+/* ===== PILLARS ===== */
+.about-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.pillar {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #eee;
+  transition: all 0.3s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.pillar-icon {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.pillar-name {
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 768px) {
+
+  #about {
+    padding: 80px 20px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  /* IMAGE COMPOSITION */
+  .about-img-comp {
+    height: 420px;
+  }
+
+  .aic-frame {
+    display: none;
+  }
+
+  .aic-main {
+    width: 75%;
+    height: 100%;
+    left: 0;
+    right: auto;
+  }
+
+  .aic-accent {
+    width: 65%;
+    height: 55%;
+    top: 60px;
+    left: 20px;
+  }
+
+  .aic-year {
+    top: 10px;
+    left: 10px;
+    padding: 8px 12px;
+  }
+
+  .aic-year-num {
+    font-size: 16px;
+  }
+
+  .aic-tag {
+    bottom: 10px;
+    left: 20px;
+    right: auto;
+  }
+
+  /* TEXT */
+  .sec-title {
+    font-size: 32px;
+  }
+
+  .sec-title em {
+    color: #3f6b54;
+  }
+
+  .about-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--mid);
+  }
+
+  /* QUOTE */
+  .about-pullquote {
+    padding: 18px;
+    margin: 25px 0;
+  }
+
+  .about-pullquote p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  /* PILLARS */
+  .about-pillars {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .pillar {
+    padding: 14px;
+  }
+
+  .pillar-name {
+    font-size: 12px;
+  }
+}

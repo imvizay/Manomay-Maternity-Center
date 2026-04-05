@@ -186,3 +186,154 @@ textarea {
   margin-top: 10px;
   color: #888;
 }
+
+
+@media (max-width: 768px) {
+
+  .appt-sec {
+    padding: 80px 30px;
+  }
+
+  .appt-layout {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .sec-title.light {
+    font-size: 42px;
+  }
+
+  .appt-left p {
+    font-size: 0.9rem;
+  }
+
+  /* form */
+  .appt-form-card {
+    padding: 30px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-field.full {
+    grid-column: span 1;
+  }
+
+  /* ornament adjust */
+  .appt-ornament {
+    width: 150px;
+    height: 150px;
+    top: -40px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .appt-sec {
+    padding: 60px 20px;
+  }
+
+  .sec-title.light {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .appt-left p {
+    font-size: 0.85rem;
+    line-height: 1.7;
+  }
+
+  .appt-feat {
+    padding: 0.8rem 1rem;
+    gap: 10px;
+  }
+
+  .appt-feat-text {
+    font-size: 0.75rem;
+  }
+
+  .appt-form-card {
+    padding: 20px;
+  }
+
+  .form-title {
+    font-size: 1.1rem;
+  }
+
+  .form-subtitle {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .form-submit {
+    padding: 12px;
+    font-size: 12px;
+  }
+
+  .appt-ornament {
+    display: none; /* remove clutter */
+  }
+}
+
+
+@media (max-width: 360px) {
+
+  .appt-sec {
+    padding: 50px 0.2rem;
+  }
+
+  .sec-title.light {
+    font-size: 26px;
+  }
+
+  .appt-left p {
+    font-size: 0.8rem;
+  }
+
+  .appt-feat {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .appt-feat-icon {
+    font-size: 1rem;
+  }
+
+  .appt-feat-text {
+    font-size: 0.7rem;
+  }
+
+  .appt-form-card {
+    padding: 16px;
+  }
+
+  .form-title {
+    font-size: 1rem;
+  }
+
+  .form-field label {
+    font-size: 0.55rem;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    font-size: 0.75rem;
+    padding: 8px;
+  }
+
+  .form-submit {
+    font-size: 11px;
+    padding: 10px;
+  }
+
+}

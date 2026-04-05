@@ -6,3 +6,8 @@
 body{
   cursor: none;
 }
+
+:root{
+  --gold:rgb(255, 201, 40);
+  --gold-light:rgba(233, 184, 37, 0.957);
+}

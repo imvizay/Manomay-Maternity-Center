@@ -5,19 +5,35 @@ import { useEffect, useState } from "react";
 
 
 export default function Navbar() {
+  const [showNav,setShowNav] = useState(true)
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
+  let lastScrollY = window.scrollY;
+    console.log("y",window.scrollY)
+  const handleScroll = () => {
+      const pageHeight = document.documentElement.scrollHeight;
+      const triggerPoint = pageHeight * 0.5; // 50% scroll
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+      const currentScrollY = window.scrollY;
+
+      // background change
+      setScrolled(currentScrollY > 80)
+
+      if (currentScrollY > triggerPoint) {
+        setShowNav(false)
+      } else {
+        setShowNav(true)
+      }
+      lastScrollY = currentScrollY
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   return (
-    <nav className={`nav ${scrolled ? "solid" : ""}`}>
+    <nav className={`nav ${scrolled ? "solid" : ""} ${showNav ? "show" : "hide"}`}>
       <div className="nav-left">
         <div className="logo-mark">✦</div>
 

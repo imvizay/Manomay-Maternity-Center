@@ -169,7 +169,7 @@
 @media (max-width: 768px) {
 
   #experience {
-    padding: 60px 20px;
+    padding: 60px 0.2rem;
   }
 
   .sec {
@@ -195,27 +195,26 @@
     line-height: 1.8;
   }
 
-  /* GRID FIX (IMPORTANT) */
-  .exp-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    gap: 12px;
+  /* GRID */
+   .exp-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 140px;
+
+    grid-template-areas:
+      "a a"
+      "b c"
+      "d e";
   }
 
-  /* REMOVE DESKTOP POSITIONING */
-  .eg-1,
-  .eg-2,
-  .eg-3,
-  .eg-4,
-  .eg-5 {
-    grid-column: auto;
-    grid-row: auto;
-  }
+  
+  .eg-1 { grid-area: a; }
+  .eg-2 { grid-area: b; }
+  .eg-3 { grid-area: c; }
+  .eg-4 { grid-area: d; }
+  .eg-5 { grid-area: e; }
 
-  /* CARD SIZE */
   .eg-fill {
-    height: 160px;
-    border-radius: 6px;
+    height: 100%;
   }
 
   /* ICON */

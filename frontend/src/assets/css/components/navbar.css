@@ -12,6 +12,10 @@
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.nav.hide{
+  opacity: 0;
+}
+
 /* SCROLL STATE */
 .nav.solid {
   background: rgba(251, 249, 246, 0.96);
@@ -129,7 +133,7 @@
 
 /* MOBILE FRIENDLY CSS */
 
-@media (max-width:360px){
+@media (max-width:480px){
 
   .nav{
     justify-content: left;

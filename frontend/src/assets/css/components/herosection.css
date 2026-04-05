@@ -275,13 +275,11 @@
     color: rgba(255, 255, 255, 0.38);
 }
 
-@media (max-width:360px){
+@media (max-width:480px){
+    
     .hero{
         height: fit-content;
         padding-bottom: 2rem;
-    }
-    .hero-card{
-        display: none;
     }
     .hero-container{
         padding: 0;
@@ -295,5 +293,38 @@
     }
     .hero-actions{
         flex-direction: column;
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .hero-actions .btn-primary{
+        background-color: rgb(38, 70, 35);
+        color: white;
+        border: 1.5px solid white;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .hero-actions .btn-outline{
+        background-color: rgba(255, 255, 255, 0);
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+    }
+    /* right card */
+    .hero-card{
+        margin-top: 2rem;
+    }
+    /* remove pseduo class */
+    .hero-card::after,.hero-card::before{
+        content: none;
+    }
+    .hero-card .card-grid{
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
+    }
+    .hero-card .card-grid .hsc-item{
+        padding: 0;
     }
 }
+
+
+@media(max)

@@ -1,78 +1,125 @@
-import '@assets/css/components/herosection.css'
-
 import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { Hospital } from 'lucide-react';
+import {
+  CalendarCheck,
+  Phone,
+  ShieldCheck,
+  Clock,
+  Baby,
+  Star,
+  Award,
+  Stethoscope,
+  HeartPulse,
+} from "lucide-react";
+import "@assets/css/components/herosection.css";
 
-export default function Hero() {
-  const heroRef = useRef();
-
+export default function HeroSection() {
  
 
   return (
-    <section ref={heroRef} className="hero">
-      {/* BACKGROUND GLOW */}
-      <div className="hero-bg"></div>
-
-      <div className="hero-container">
-        
-        {/* LEFT CONTENT */}
-        <div className="hero-left">
+    <section className="hero">
+      {/* ── BACKGROUND ── */}
+    
+      <div className="hero-glow" />
       
+      {/* ── CONTENT ── */}
+      <div className="hero-container">
+
+        {/* ═══════════ LEFT ═══════════ */}
+        <div className="hero-left">
+
+          {/* Eyebrow */}
           <div className="hero-eyebrow">
-            <div className='eyebrow-ornament'>
-              <div className='orn-line'></div>
-              <div className='orn-diamong'>◆</div>
+            <div className="eyebrow-line">
+              <span />
+              <i>◆</i>
             </div>
-              <span className='hero-eyebrow-text'>Lalghati, Bhopal · Since 2014</span>
+            <p className="eyebrow-text">Lalghati, Bhopal &nbsp;·&nbsp; Since 2014</p>
           </div>
 
+          {/* Headline */}
           <h1 className="hero-title">
-            <span className="outline">Exceptional</span><br />
-            <span className="gold">Maternity Care</span><br />
-            <span>for Every</span><br />
-            <span>New Beginning</span>
+            <span className="t-muted">Exceptional</span>
+            <span className="t-gold">Maternity Care</span>
+            <span className="t-solid">for Every</span>
+            <span className="t-outline">New Beginning</span>
           </h1>
 
+          {/* Description */}
           <p className="hero-desc">
-           A sanctuary where clinical excellence meets heartfelt compassion — trusted by thousands of Bhopal families through over a decade of dedicated maternity care.
+            A sanctuary where clinical excellence meets heartfelt compassion —
+            trusted by thousands of Bhopal families through over a decade of
+            dedicated maternity care.
           </p>
 
+          {/* CTA Buttons */}
           <div className="hero-actions">
-            <button className="btn-primary">Schedule Consultation</button>
-            <button className="btn-outline">Call Now</button>
+            <button className="btn-primary">
+              <CalendarCheck size={15} strokeWidth={2} />
+              Schedule Consultation
+            </button>
+            <button className="btn-outline">
+              <Phone size={14} strokeWidth={2} />
+              Call Now
+            </button>
           </div>
         </div>
 
-        {/* RIGHT CARD */}
+        {/* ═══════════ RIGHT CARD ═══════════ */}
         <div className="hero-card">
-          <p className="card-title">A Legacy of Safe Deliveries</p>
 
-          <div className="card-grid">
-            <div className='hsc-item'>
-              <h2 className='hsc-num'>10<sup>+</sup></h2>
-              <p className='hsc-label'>Years Practice</p>
+          {/* Card heading */}
+          <div className="card-header">
+            <span className="card-kicker">Our Legacy</span>
+            <p className="card-title">A Decade of Safe Deliveries</p>
+          </div>
+
+          {/* Stats grid */}
+          <div className="card-stats">
+            <div className="cstat">
+              <div className="cstat-icon"><Star size={16} strokeWidth={1.5} /></div>
+              <div className="cstat-num">10<sup>+</sup></div>
+              <div className="cstat-label">Years Practice</div>
             </div>
-            <div className='hsc-item'>
-              <h2 className='hsc-num'>1000<sup>+</sup></h2>
-              <p className='hsc-label'>Safe Deliveries</p>
+
+            <div className="cstat">
+              <div className="cstat-icon"><Baby size={16} strokeWidth={1.5} /></div>
+              <div className="cstat-num">1000<sup>+</sup></div>
+              <div className="cstat-label">Safe Deliveries</div>
             </div>
-            <div className='hsc-item'>
-              <h2 className='hsc-num'>24/<sup>7</sup></h2>
-              <p className='hsc-label'>Emergency</p>
+
+            <div className="cstat">
+              <div className="cstat-icon"><Clock size={16} strokeWidth={1.5} /></div>
+              <div className="cstat-num">24/<sup>7</sup></div>
+              <div className="cstat-label">Emergency Care</div>
             </div>
-            <div className='hsc-item'>
-              <h2 className='hsc-num'>98<sup>%</sup></h2>
-              <p className='hsc-label'>Satisfaction</p>
+
+            <div className="cstat">
+              <div className="cstat-icon"><HeartPulse size={16} strokeWidth={1.5} /></div>
+              <div className="cstat-num">98<sup>%</sup></div>
+              <div className="cstat-label">Patient Satisfaction</div>
             </div>
           </div>
-          <div className="hsc-divider"></div>
 
-          <div className="hsc-badge">
-          <div className="hsc-badge-icon"><Hospital color='var(--gold)'/></div>
-          <div className="hsc-badge-text">Bhopal's <strong>Most Trusted</strong> Maternity Home</div>
+          <div className="card-divider" />
+
+          {/* Badge */}
+          <div className="card-badge">
+            <Award size={22} strokeWidth={1.4} className="badge-icon" />
+            <p className="badge-text">
+              Bhopal's <strong>Most Trusted</strong> Maternity Home —&nbsp;
+              led by <strong>Dr. Mania Kushwaha</strong>, MBBS, DGO
+            </p>
+          </div>
+
+          {/* Tags */}
+          <div className="card-tags">
+            <span className="tag"><ShieldCheck size={11} />NABH Compliant</span>
+            <span className="tag"><Stethoscope size={11} />Expert OB-GYN</span>
+            <span className="tag"><HeartPulse size={11} />NICU Support</span>
+          </div>
+
         </div>
-        </div>
+        {/* end right card */}
 
       </div>
     </section>

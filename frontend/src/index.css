@@ -11,3 +11,20 @@ body{
   --gold:rgb(255, 201, 40);
   --gold-light:rgba(233, 184, 37, 0.957);
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: #000000;
+  
+}
+
+/* thumb */
+::-webkit-scrollbar-thumb {
+  background: #0856ff;
+  border-radius: 10px;
+}

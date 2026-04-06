@@ -1,6 +1,10 @@
 // css
 import '@assets/css/components/about.css';
 
+// images
+import motherChildImg from '@assets/images/motherBaby2.jpg'
+import babyImg from '@assets/images/newborn.avif'
+
 // icons
 import { ShieldCheck , HeartHandshake, Microscope, Leaf, Baby} from 'lucide-react'
 
@@ -17,10 +21,10 @@ function About() {
             <div className="about-img-comp reveal-left in">
               <div className="aic-frame"></div>
               <div className="aic-main">
-                <div className="aic-fill">🤱</div>
+                <div className="aic-fill"><img src={motherChildImg} alt="" /></div>
               </div>
               <div className="aic-accent">
-                <div className="aic-accent-fill"><Baby/></div>
+                <div className="aic-accent-fill"><img src={babyImg} alt="" /></div>
               </div>
               <div className="aic-year">
                 <div className="aic-year-num">2014</div>

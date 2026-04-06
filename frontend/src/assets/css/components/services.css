@@ -195,3 +195,99 @@
     line-height: 1.7;
   }
 }
+
+
+@media (max-width: 360px) {
+
+  .services-sec {
+    background: #0b0f0d;
+  }
+
+  .services-bg-text {
+    font-size: 70px;
+    color: rgba(255,255,255,0.015);
+  }
+
+  .services-head h2 {
+    font-size: 28px;
+  }
+
+  .services-head-right {
+    color: #9aa19c;
+  }
+
+  /* REMOVE GRID FEEL */
+  .services-grid {
+    background: none;
+    border: none;
+    gap: 14px;
+  }
+
+  .svc-card {
+    background: #111714;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .svc-card:hover {
+    background: #141a17;
+  }
+
+  .svc-num {
+    font-size: 50px;
+    color: rgba(255,255,255,0.02);
+  }
+
+  .svc-card h3 {
+    color: #f1f1f1;
+  }
+
+  .svc-card p {
+    color: #9aa19c;
+  }
+}
+
+@media (min-width: 361px) and (max-width: 480px) {
+
+  .services-sec {
+    background: linear-gradient(135deg, #0e120f, #121a16);
+  }
+
+  .services-bg-text {
+    font-size: 100px;
+    color: rgba(255,255,255,0.02);
+  }
+
+  /* KEEP GRID BUT SOFTEN IT */
+  .services-grid {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .svc-card {
+    background: rgba(255,255,255,0.02);
+    backdrop-filter: blur(12px);
+    border-right: 1px solid rgba(255,255,255,0.04);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+
+  .svc-card:hover {
+    background: rgba(255,255,255,0.04);
+  }
+
+  .svc-num {
+    font-size: 60px;
+    color: rgba(255,255,255,0.03);
+  }
+
+  .svc-card h3 {
+    color: #ffffff;
+  }
+
+  .svc-card p {
+    color: #b5b5b5;
+  }
+}
